@@ -10,12 +10,22 @@ namespace Metody
         public string LastName;
 
         private DateTime dateOfBirth;
+        private string contactNumber;
+
+        public static int Count = 0;
+
+        public string ConactNumber
+        {
+            get { return contactNumber; }
+            set { contactNumber = value; }
+        }
 
         public Person(string firstName, string lastName)
         {
             Console.WriteLine("Constructor1");
             FirstName = firstName;
             LastName = lastName;
+            Count++;
                 
         }
         public Person(DateTime dateOfBirth, string firstName, string lastName) : this(firstName, lastName)

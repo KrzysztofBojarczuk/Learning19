@@ -6,20 +6,22 @@ namespace Metody
     {
         static void Main(string[] args)
         {
-            Person bill = new Person("Bill", "Wick");
+            ExcelFile excelFile = new ExcelFile();
 
-            bill.FirstName = "Bill";
+            excelFile.CreatedOn = DateTime.Now;
+            excelFile.FileName = "excel-file";
 
+            excelFile.GenerateReport();
 
-            bill.SetDateOfBirth(new DateTime(1990, 1, 1));
+            WordDocumentFile wordDocumentFile = new WordDocumentFile();
 
-            //Console.WriteLine($"{bill.FirstName} {bill.GetDateOfBirth()}");
+            wordDocumentFile.CreatedOn = DateTime.Now;
 
-            bill.SayHi();
+            wordDocumentFile.FileName = "word-file";
 
-            Person john = new Person(new DateTime(1990, 1, 2), "John", "Wick");
+            wordDocumentFile.Print();
 
-            john.SayHi();
+            
         }
     }
 }
