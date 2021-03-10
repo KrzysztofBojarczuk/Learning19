@@ -20,6 +20,7 @@ namespace Metody
             wordDocumentFile.FileName = "word-file";
 
             wordDocumentFile.Print();
+            Console.WriteLine("lol");
 
             
         }
